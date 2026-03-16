@@ -7,10 +7,6 @@
     "hello": "node src/hello-langchain.mjs",
     "cursor": "node src/cursor.mjs",
     "invoke": "node src/langchain-invoke.mjs",
-    "tool:read": "node src/tool-file-read.mjs",
-    "skills:add": "node scripts/skills-add.mjs",
-    "demo:local-tool": "node src/demo-local-tool.mjs",
-    "demo:mcp-client": "node src/demo-mcp-client.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
