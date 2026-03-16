@@ -2,10 +2,6 @@
 
 Small LangChain + OpenAI-compatible demos.
 
-## Setup
-
-- Copy `example.env` to `.env`
-- Fill in your key / endpoint / model
 
 ## Run
 
