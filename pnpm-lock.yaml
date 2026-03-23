@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@langchain/anthropic':
+        specifier: ^1.3.23
+        version: 1.3.23(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))
       '@langchain/classic':
         specifier: ^1.0.23
         version: 1.0.23(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(cheerio@1.2.0)(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0)
@@ -17,6 +20,9 @@ importers:
       '@langchain/core':
         specifier: ^1.1.27
         version: 1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0)
+      '@langchain/deepseek':
+        specifier: ^1.0.17
+        version: 1.0.17(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(ws@8.19.0)
       '@langchain/mcp-adapters':
         specifier: ^1.1.3
         version: 1.1.3(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(@langchain/langgraph@1.2.2(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(zod-to-json-schema@3.25.1(zod@4.3.6))(zod@4.3.6))
@@ -50,6 +56,19 @@ packages:
   '@anthropic-ai/sdk@0.27.3':
     resolution: {integrity: sha512-IjLt0gd3L4jlOfilxVXTifn42FnVffMgDC04RJK1KDZpmkBWLv0XC92MVVmkxrFZNS/7l3xWgP/I3nqtX1sQHw==}
 
+  '@anthropic-ai/sdk@0.74.0':
+    resolution: {integrity: sha512-srbJV7JKsc5cQ6eVuFzjZO7UR3xEPJqPamHFIe29bs38Ij2IripoAhC0S5NslNbaFUYqBKypmmpzMTpqfHEUDw==}
+    hasBin: true
+    peerDependencies:
+      zod: ^3.25.0 || ^4.0.0
+    peerDependenciesMeta:
+      zod:
+        optional: true
+
+  '@babel/runtime@7.29.2':
+    resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
+    engines: {node: '>=6.9.0'}
+
   '@borewit/text-codec@0.2.2':
     resolution: {integrity: sha512-DDaRehssg1aNrH4+2hnj1B7vnUGEjU6OIlyRdkMd0aUdIUvKXrJfXsy8LVtXAy7DRvYVluWbMspsRhz2lcW0mQ==}
 
@@ -77,6 +96,12 @@ packages:
   '@ibm-cloud/watsonx-ai@1.7.9':
     resolution: {integrity: sha512-farwTW1ffFt3NVvqZQIcd0VBKByLK6ctnfn4XM7Rf9Mf5JJbNwVPV1Wll046E/MlKAaZEM6sFDGAh+JCnnmqyQ==}
     engines: {node: '>=20.0.0'}
+
+  '@langchain/anthropic@1.3.23':
+    resolution: {integrity: sha512-iHCUWKXMZcbjdLZ+mohJMo+tH4HXcZXYktEM02xetpwiqi2vaoDeZsiK/A2kEN24b9QbpG0sLueRNtJHn/fAFA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.1.32
 
   '@langchain/classic@1.0.23':
     resolution: {integrity: sha512-bqL1hUE6eG9Yvyiocg8jJ8NR7Vm+zVhB1wRr9od+dbyFVC3+utrY7m1zm6PortVx1wcdd9UPRu3elEa1sdQA8A==}
@@ -462,6 +487,12 @@ packages:
   '@langchain/core@1.1.32':
     resolution: {integrity: sha512-ZZNiER5tceFXqZOghfrxNHzM60gcQL5XK/8Ow5+o4OuKHrP1p/RUQBDM9Y1nddi/VmKQj+ncaXXM5KovXTEGGQ==}
     engines: {node: '>=20'}
+
+  '@langchain/deepseek@1.0.17':
+    resolution: {integrity: sha512-edpHtQBvrPTMU/dy5sqWx99tPYBh86CMBlcc9Fp9HrGtkFvUhP1gY86P80wuYtuTMXPnNyPfXJebiw87OSvq6g==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.0.0
 
   '@langchain/langgraph-checkpoint@1.0.0':
     resolution: {integrity: sha512-xrclBGvNCXDmi0Nz28t3vjpxSH6UYx6w5XAXSiiB1WEdc2xD2iY/a913I3x3a31XpInUW/GGfXXfePfaghV54A==}
@@ -964,6 +995,10 @@ packages:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
+  json-schema-to-ts@3.1.1:
+    resolution: {integrity: sha512-+DWg8jCJG2TEnpy7kOm/7/AxaYoaRbjVB4LFZLySZlWn8exGs3A4OLJR966cVvU26N7X9TWxl+Jsw7dzAqKT6g==}
+    engines: {node: '>=16'}
+
   json-schema-traverse@1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
 
@@ -1310,6 +1345,9 @@ packages:
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
+  ts-algebra@2.0.0:
+    resolution: {integrity: sha512-FPAhNPFMrkwz76P7cdjdmiShwMynZYN6SgOujD1urY4oNm80Ou9oMdmbR45LotcKOXoy7wSmHkRFE6Mxbrhefw==}
+
   type-is@2.0.1:
     resolution: {integrity: sha512-OZs6gsjF4vMp32qrCbiVSkrFmXtG/AZhY3t0iAMrMBiAZyV9oALtXO8hsrHbMXF9x6L3grlFuwW2oAz7cav+Gw==}
     engines: {node: '>= 0.6'}
@@ -1425,6 +1463,14 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
+  '@anthropic-ai/sdk@0.74.0(zod@4.3.6)':
+    dependencies:
+      json-schema-to-ts: 3.1.1
+    optionalDependencies:
+      zod: 4.3.6
+
+  '@babel/runtime@7.29.2': {}
+
   '@borewit/text-codec@0.2.2': {}
 
   '@browserbasehq/sdk@2.8.0':
@@ -1469,6 +1515,12 @@ snapshots:
       ibm-cloud-sdk-core: 5.4.9
     transitivePeerDependencies:
       - supports-color
+
+  '@langchain/anthropic@1.3.23(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))':
+    dependencies:
+      '@anthropic-ai/sdk': 0.74.0(zod@4.3.6)
+      '@langchain/core': 1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0)
+      zod: 4.3.6
 
   '@langchain/classic@1.0.23(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(cheerio@1.2.0)(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0)':
     dependencies:
@@ -1538,6 +1590,13 @@ snapshots:
       - '@opentelemetry/exporter-trace-otlp-proto'
       - '@opentelemetry/sdk-trace-base'
       - openai
+      - ws
+
+  '@langchain/deepseek@1.0.17(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(ws@8.19.0)':
+    dependencies:
+      '@langchain/core': 1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0)
+      '@langchain/openai': 1.2.13(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))(ws@8.19.0)
+    transitivePeerDependencies:
       - ws
 
   '@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.1.32(openai@6.29.0(ws@8.19.0)(zod@4.3.6))(ws@8.19.0))':
@@ -2057,7 +2116,7 @@ snapshots:
       jsonwebtoken: 9.0.3
       load-esm: 1.0.3
       mime-types: 2.1.35
-      retry-axios: 2.6.0(axios@1.13.6)
+      retry-axios: 2.6.0(axios@1.13.6(debug@4.4.3))
       tough-cookie: 4.1.4
     transitivePeerDependencies:
       - supports-color
@@ -2095,6 +2154,11 @@ snapshots:
   js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
+
+  json-schema-to-ts@3.1.1:
+    dependencies:
+      '@babel/runtime': 7.29.2
+      ts-algebra: 2.0.0
 
   json-schema-traverse@1.0.0: {}
 
@@ -2317,7 +2381,7 @@ snapshots:
 
   requires-port@1.0.0: {}
 
-  retry-axios@2.6.0(axios@1.13.6):
+  retry-axios@2.6.0(axios@1.13.6(debug@4.4.3)):
     dependencies:
       axios: 1.13.6(debug@4.4.3)
 
@@ -2424,6 +2488,8 @@ snapshots:
       url-parse: 1.5.10
 
   tr46@0.0.3: {}
+
+  ts-algebra@2.0.0: {}
 
   type-is@2.0.1:
     dependencies:
