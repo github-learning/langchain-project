@@ -1,3 +1,6 @@
+/**
+ * 连接 → 建表 → 插入 → 搜索
+ */
 import "dotenv/config";
 import { MilvusClient, DataType } from "@zilliz/milvus2-sdk-node";
 import { OpenAIEmbeddings } from "@langchain/openai";
