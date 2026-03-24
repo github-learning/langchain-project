@@ -83,6 +83,7 @@ const query = "什么是前端框架？";
 
 /**
  * 5. 相似度检索（Top3）
+ * 内部自动做 query 的 Embedding 向量化
  */
 const results = await vectorStore.similaritySearchWithScore(query, 3);
 
