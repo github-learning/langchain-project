@@ -1,0 +1,58 @@
+{
+  "model": "gpt-4o",
+  "cases": [
+    {
+      "name": "短文本拒绝",
+      "input": "今天开了个会，讨论了一下项目进度。",
+      "prompt": "对以下内容做会议记录:\n\n今天开了个会，讨论了一下项目进度。",
+      "expect": {
+        "reject": true
+      }
+    },
+    {
+      "name": "标准中文会议 - 结构完整性",
+      "inputFile": "testDocs/test-cases/case5-extract-todos-only.md",
+      "prompt": "对以下会议内容做会议记录",
+      "expect": {
+        "reject": false,
+        "minSections": 5,
+        "sections": ["会议主题", "参会人员", "行动项"],
+        "hasTable": true,
+        "language": "zh"
+      }
+    },
+    {
+      "name": "英文会议 - 语言跟随",
+      "inputFile": "testDocs/test-cases/case2-english.md",
+      "prompt": "Generate a meeting summary for the following transcript",
+      "expect": {
+        "reject": false,
+        "minSections": 5,
+        "hasTable": true,
+        "language": "en",
+        "notContains": ["会议主题", "参会人员"]
+      }
+    },
+    {
+      "name": "无行动项 - 未提及标注",
+      "inputFile": "testDocs/test-cases/case3-no-actions.md",
+      "prompt": "对以下会议内容做会议记录",
+      "expect": {
+        "reject": false,
+        "sections": ["会议主题", "参会人员"],
+        "language": "zh",
+        "contains": ["未提及"]
+      }
+    },
+    {
+      "name": "口语化记录 - 人工复核提示",
+      "inputFile": "testDocs/test-cases/case4-messy-transcript.md",
+      "prompt": "对以下会议内容做会议记录",
+      "expect": {
+        "reject": false,
+        "language": "zh",
+        "contains": ["建议人工复核"]
+      }
+    }
+  ]
+}
